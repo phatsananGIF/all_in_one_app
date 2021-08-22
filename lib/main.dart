@@ -1,5 +1,5 @@
-import 'package:all_in_one_app/screen/my_calculator_page/my_calculator_page.dart';
-import 'package:all_in_one_app/screen/my_home_page.dart';
+
+import 'package:all_in_one_app/src/screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,13 +13,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'All in one',
-      theme:ThemeData(
+      theme: ThemeData(
+        primarySwatch: Colors.blueGrey,
         scaffoldBackgroundColor: Color(0xFFF9F8FD),
-        primaryColor: Color(0xFF0C9869),
-        textTheme: Theme.of(context).textTheme.apply(bodyColor: Color(0xFF3C4046)),
+        primaryColor: Color(0xFF9f94ba),
+        textTheme:
+            Theme.of(context).textTheme.apply(bodyColor: Color(0xFF3C4046)),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyCalculatorPage(),
+      home: SplashScreen(),
     );
   }
 }
